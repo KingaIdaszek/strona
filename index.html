@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+
+      <meta charset="UTF-8">
+      <title>Uks Atlas</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+           <meta name="description" content="Witamy na stronie szkoły, Na stronie dowiesz się, jak wygląda życie codzienne w naszych szkołach. Znajdziesz informacje o najnowszych wydarzeniach, promocjach i ofertach. Zobaczysz zdjęcia i materiały wideo z naszych placówek i organizowanych przez nas wydarzeń.">
+           <meta name="keywords" content="teb, edukacja, nauka, szkoła, uczenie się,teb edukacja,teb technikum,technikum teb edukacja,edukacja,teb,teb edukacja gdynia,teb edukacja rzeszów,goldzor teb edukacja,teb msi,teb esport,edukacji,edukacja bełchatów,teb leszno,technikum teb,teb belchatow,msi teb,teb opole,teb gdańsk,teb poznań,teb rzeszów,teb weterynaria,teb komputery msi,teb technik reklamy,teb technikum nowy sącz,program edukacyjny,spedycja,nauka,administracja,teby belchatow,teby bełchatów,dekoracja wnętrz,policja,pielęgnacja stóp,szkołateb,stylizacja paznokci">
+
+
+           <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+           <link rel="stylesheet" href="style.css" type="text/css">
+           <link rel="stylesheet" href="css/fontello.css" type="text/css">
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+     </head>
+
+  <body>
+
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="index.html"><img class="imgteb" src="img/logo.png" width="80" height="80"></a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="index.html" class="fade">Aktualności</a></li>
+          <li><a href="historia.html" class="fade">Historia</a></li>
+          <li><a href="dokumenty.html" class="fade">Dokumenty</a></li>
+          <li><a href="trenerzy.html" class="fade">Trenerzy</a></li>
+          <li>
+            <a class="desktop-item">Galeria</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Galeria</label>
+            <ul class="drop-menu">
+              <li><a href="podstrona1.html" class="fade">Szermierka</a></li>
+              <li><a href="podstrona3.html" class="fade">Crossminton</a></li>
+              <li><a href="podstrona2.html" class="fade">Taekwondo</a></li>
+            </ul>
+          </li>
+             <li><a href="kontakt.html" class="fade">Kontakt</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
+
+
+
+    <div id="container">
+
+
+        <div class="slider">
+          	<div class="item">
+                <a href="podstrona1.html" class="fade"><img src="img/slajd1.jpg" alt="Pierwszy"></a>
+                <div class="slideText"><a href="podstrona1.html">Szermierka</a></div>
+            </div>
+
+            <div class="item">
+                <a href="podstrona2.html" class="fade"><img src="img/slajd2.jpg" alt="Drugi"></a>
+                <div class="slideText"><a href="podstrona2.html">Crossminton</a></div>
+            </div>
+
+            <div class="item">
+                <a href="podstrona3.html" class="fade"><img src="img/slajd3.jpg" alt="Trzeci"></a>
+                <div class="slideText"><a href="podstrona3.html">Taekwondo</a></div>
+            </div>
+
+          	<a class="prev" onclick="minusSlide()">&#10094;</a>
+          	<a class="next" onclick="plusSlide()">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="slider-dots">
+        	<span class="slider-dots_item" onclick="currentSlide(1)"></span>
+          	<span class="slider-dots_item" onclick="currentSlide(2)"></span>
+          	<span class="slider-dots_item" onclick="currentSlide(3)"></span>
+        </div>
+
+            <script src="script.js"></script>
+
+
+      <div style="clear: both;"></div>
+
+
+         <h2 class="space"> </h2>
+
+            <p></p>
+
+            <h3></h3>
+
+            <p></p>
+
+            <h3></h3>
+
+            <p></p>
+
+          <div id="socialmedia">
+         <h2 class="media">Znajdź nas na:</h2>
+
+         <div class="buttons">
+       <div class="row">
+         <a href="https://www.facebook.com/uksatlas"><button class="facebook">
+           <span><i class="icon-facebook"></i></span>
+           Facebook</button></a>
+         
+       </div>
+       </div>
+
+         </div>
+    </div>
+
+        <div id="footer">
+              <p> UKS Atlas &copy; Wszelkie prawa zastrzeżone</p>
+            </div>
+
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+
+              <script type="text/javascript">
+              $(document).ready(function() {
+              $("body").css("display", "none"); 
+
+              $("body").fadeIn(500);
+
+              $("a.fade").click(function(event){ 
+              event.preventDefault();
+              linkLocation = this.href;
+              $("body").fadeOut(500, redirectPage); 
+              });
+
+              function redirectPage() {
+              window.location = linkLocation;
+              }
+              });
+              </script>
+
+
+    </body>
+
+    </html>
